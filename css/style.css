@@ -1,0 +1,961 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Container {
+  overflow: hidden;
+  height: 9000px;
+  
+}
+/* body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  
+} */
+
+.faces-container {
+  width: 100%; /* عرض الحاوية بالكامل */
+  overflow: hidden;
+  position: relative;
+}
+
+.The-faces {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.The-faces img {
+  width: 100%; /* كل صورة تأخذ العرض بالكامل */
+  flex: 0 0 100%; /* يتم تمديد الصور على كامل الحاوية */
+  height: 650px;
+  background-size: contain;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* إضافة ظل للصورة */
+  border-radius: 8px; /* إضافة زوايا دائرية للظل */
+}
+
+.container2 {
+  position: absolute;
+  bottom: 7300px;
+  left: 50%;
+  
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.container2 i {
+  font-size: 2rem;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  user-select: none;
+  position: relative;
+  bottom: 2000px;
+}
+.butt {
+  position: relative;
+  bottom: 150px;
+  text-align: center;
+  
+}
+.Book-Now {
+  background-color: #fffbfb00;
+  width: 14%;
+  padding: 15px;
+  border-radius: 5px;
+  border: solid 1px #fffbfb ;
+  font-size: 20px;
+  color: aliceblue;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+.Book-Now:hover {
+  background-color: #f0f0f039
+  
+}
+.About-Us {
+  background-color: black;
+  position: relative;
+  bottom: 0px;
+  height: 9000px;
+  bottom: 50px;
+}
+/* .About-Us h1 {
+  text-align: center;
+  font-size: 200px;
+  color: #f0f0f0;
+} */
+.About-Us p {
+  text-align: center;
+  font-size: 20px;
+  color: #f0f0f0;
+  width: 40%;
+  position: relative;
+  left: 30%;
+  line-height: 30px;
+  font-weight: 10;
+  top: 100px;
+}
+.image-container3 {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+
+.image-wrapper3 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-wrapper3 img {
+  width: 130%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  left: 160%;
+  top: 190px;
+  cursor: pointer;
+}
+
+/* تأثير عند المرور على الحاوية */
+.image-container3:hover .image-wrapper3:nth-child(1) {
+  transform: translateX(-500px) translateY(-50px);
+}
+
+.image-container3:hover .image-wrapper3:nth-child(2) {
+  transform: translateX(400px) translateY(-100px);
+}
+
+.image-container3:hover .image-wrapper3:nth-child(3) {
+  transform: translateX(0px) translateY(200px);
+}
+.MICHELIN {
+  width: 1200px;
+  height: 300px;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;  /* منع النص من الخروج خارج الحاوية */
+  top: 300px;
+  left: 10%;
+}
+
+/* إخفاء النص عن طريق نقله للأسفل */
+.MICHELIN h1 {
+  transform: translateY(100%);  /* النص يبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء النص */
+  transition: transform 0.9s ease, opacity 0.5s ease;  /* تأثير سلس */
+  color: rgb(255, 255, 255);
+  font-size: 150px;
+}
+
+/* إظهار النص عند مرور الماوس */
+.MICHELIN.show h1 {
+  transform: translateY(0);  /* إرجاع النص إلى مكانه الطبيعي */
+  opacity: 1;  /* إظهار النص */
+}
+.About {
+  width: 700px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;  /* منع النص من الخروج خارج الحاوية */
+  left: 25%;
+  font-size: 50px;
+  top: 50px;
+}
+
+/* إخفاء النص عن طريق نقله للأسفل */
+.About h1 {
+  transform: translateY(100%);  /* النص يبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء النص */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+  color: #f0f0f0;
+
+}
+
+/* إظهار النص عند إضافة الفئة "show" */
+.About.showw h1 {
+  transform: translateY(0);  /* إرجاع النص إلى مكانه الطبيعي */
+  opacity: 1;  /* إظهار النص */
+}
+.Selected  {
+  position: relative;
+  top: 200px;
+  left: 15%;
+  
+}
+.img44 {
+  width: 280px;  /* يمكنك تغيير الحجم حسب الحاجة */
+  height: 290px; /* يمكنك تغيير الحجم حسب الحاجة */
+  overflow: hidden;  /* منع الصورة من الخروج خارج الحاوية */
+  position: relative; /* لضمان تأثير التمرير */
+  bottom: 150px;
+}
+
+/* إخفاء الصورة عن طريق تحريكها للأسفل */
+.img44 img {
+  transform: translateY(100%);  /* الصورة تبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء الصورة */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+}
+
+/* إظهار الصورة عند إضافة الفئة "show" */
+.img44.show img {
+  transform: translateY(0);  /* إرجاع الصورة إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصورة */
+}
+
+.img22 {
+  position: relative;
+  width: 400px;  /* يمكنك تغيير الحجم حسب الحاجة */
+  height: 350px; /* يمكنك تغيير الحجم حسب الحاجة */
+    /* منع الصور من الخروج خارج الحاوية */
+  position: relative;
+  top: 200px;
+  left: 20%;
+  
+}
+
+.img22 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(100%);  /* الصور تبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء الصور */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+}
+
+/* إظهار الصور عند إضافة الفئة "show" */
+.img22.shows img {
+  transform: translateY(0);  /* إرجاع الصور إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصور */
+}
+
+/* تخصيص تأثير التمرير للصور المختلفة */
+.img22:hover img:nth-child(1) {
+  transform: translateX(550px) translateY(50px);  /* تأثير التمرير للصور الأولى */
+}
+
+.img22:hover img:nth-child(2) {
+  transform: translateX(-250px) translateY(-100px);  /* تأثير التمرير للصور الثانية */
+}
+
+.img22:hover img:nth-child(3) {
+  transform: translateX(150px) translateY(-20px); /* تأثير التمرير للصور الثالثة */
+}
+.GaultMillau {
+  position: relative;
+  overflow: hidden;  /* منع النص من الخروج خارج الحاوية */
+  height: 170px; /* يمكنك تغيير الحجم حسب الحاجة */
+  top: 500px;
+  text-align: center;
+}
+
+/* تأثير النص في .GaultMillau */
+.GaultMillau h1 {
+  transform: translateY(100%);  /* النص يبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء النص */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+  color: #f0f0f0;
+  font-size: 150px;
+}
+
+/* إظهار النص عند إضافة الفئة "show" */
+.GaultMillau.showo h1 {
+  transform: translateY(0);  /* إرجاع النص إلى مكانه الطبيعي */
+  opacity: 1;  /* إظهار النص */
+}
+.img11 {
+  position: relative;
+  width: 200px;  /* يمكنك تغيير الحجم حسب الحاجة */
+  height: 200px; /* يمكنك تغيير الحجم حسب الحاجة */
+  /* منع الصورة من الخروج خارج الحاوية */
+  top: 800px;
+  left: 5%;
+
+}
+
+/* تأثير الصورة في .img11 */
+.img11 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(100%);  /* الصورة تبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء الصورة */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+}
+
+/* إظهار الصورة عند إضافة الفئة "show" */
+.img11.showx img {
+  transform: translateY(0);  /* إرجاع الصورة إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصورة */
+}
+.have p {
+  position: relative;
+  top: 10px;
+  width: 310%;
+  left: 200%;
+  line-height: 35px;
+}
+.img50 {
+  position: relative;
+  width: 500px;  /* يمكنك تغيير الحجم حسب الحاجة */
+  height: 350px; /* يمكنك تغيير الحجم حسب الحاجة */
+  top: 1200px;
+  left: 40%;
+}
+
+.img50 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(100%);  /* الصور تبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء الصور */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+}
+
+/* إظهار الصور عند مرور الماوس على الحاوية */
+.img50.showv img {
+  transform: translateY(0);  /* إرجاع الصور إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصور */
+}
+
+/* تخصيص تأثير التمرير للصور المختلفة */
+.img50:hover img:nth-child(1) {
+  transform: translateX(-450px) translateY(-200px); /* تأثير التمرير للصور الأولى */
+}
+
+.img50:hover img:nth-child(2) {
+  transform: translateX(350px) translateY(-20px);  /* تأثير التمرير للصور الثانية */
+}
+
+.img50:hover img:nth-child(3) {
+  transform: translateX(-150px) translateY(300px); /* تأثير التمرير للصور الثالثة */
+}
+.img13 img {
+  width: 23%;
+  position: relative;
+  top: 1700px;
+  cursor: pointer;
+}
+.Our-Food {
+  position: relative;
+  overflow: hidden;  /* منع النص من الخروج خارج الحاوية */
+  height: 140px; /* يمكنك تغيير الحجم حسب الحاجة */
+  
+  top: 1500px;
+  text-align: center;
+  
+}
+
+/* تأثير النص في .Our-Food */
+.Our-Food h1 {
+  transform: translateY(100%);  /* النص يبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء النص */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+  color: #f0f0f0;
+  font-size: 150px;
+  font-weight: 100;
+}
+
+/* إظهار النص عند إضافة الفئة "show" */
+.Our-Food.showq h1 {
+  transform: translateY(0);  /* إرجاع النص إلى مكانه الطبيعي */
+  opacity: 1;  /* إظهار النص */
+}
+.img60 {
+  position: relative;
+  width: 300px;  /* يمكنك تغيير الحجم حسب الحاجة */
+  height: 200px; /* يمكنك تغيير الحجم حسب الحاجة */
+  
+  top: 2050px;
+  left: 30%;
+}
+
+/* تأثير الصور في .img60 */
+.img60 img {
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  object-fit: cover;
+  transform: translateY(100%);  /* الصور تبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء الصور */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+}
+
+/* إظهار الصور عند مرور الماوس على الحاوية */
+.img60.showy img {
+  transform: translateY(0);  /* إرجاع الصور إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصور */
+}
+
+/* تخصيص تأثير التمرير للصور المختلفة */
+.img60:hover img:nth-child(1) {
+  transform: translateX(-250px) translateY(-100px); /* تأثير التمرير للصور الأولى */
+}
+
+.img60:hover img:nth-child(2) {
+  transform: translateX(-20px) translateY(300px);  /* تأثير التمرير للصور الثانية */
+}
+
+.img60:hover img:nth-child(3) {
+  transform: translateX(450px) translateY(-100px);  /* تأثير التمرير للصور الثالثة */
+}
+.Experience {
+  position: relative;
+  overflow: hidden;  /* منع النص من الخروج خارج الحاوية */
+  height: 150px; /* يمكنك تغيير الحجم حسب الحاجة */
+  top: 1900px;
+  text-align: center;
+}
+
+/* تأثير النص في .Experience */
+.Experience h1 {
+  transform: translateY(100%);  /* النص يبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء النص */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+  color: #f0f0f0;
+  font-size: 140px;
+  font-weight: 100;
+}
+
+/* إظهار النص عند إضافة الفئة "show" */
+.Experience.showz h1 {
+  transform: translateY(0);  /* إرجاع النص إلى مكانه الطبيعي */
+  opacity: 1;  /* إظهار النص */
+}
+.Our-Chef h1 {
+  color: #f0f0f0;
+  position: relative;
+  top: 2500px;
+  text-align: center;
+  font-size: 140px;
+  font-weight: 100;
+}
+.Our-Chef h3 {
+  color: #f0f0f0;
+  position: relative;
+  top: 2600px;
+  left: 30%;
+  font-size: 30px;
+  font-weight: 100;
+}
+.Our-Chef h2 {
+  color: #f0f0f0;
+  position: relative;
+  top: 2700px;
+  left: 30%;
+  font-size: 50px;
+  font-weight: 100;
+  
+}
+
+.Our-Chef p {
+  color: #f0f0f0;
+  position: relative;
+  top: 2700px;
+  
+}
+.img90 {
+  position: relative;
+  width: 300px;  /* يمكنك تغيير الحجم حسب الحاجة */
+  height: 200px; /* يمكنك تغيير الحجم حسب الحاجة */
+  top: 2300px;
+  left: 5%;
+}
+
+
+/* تأثير الصور في .img90 */
+.img90 img {
+  position: absolute;
+  width: 90%;
+  height: 210%;
+  object-fit: cover;
+  transform: translateY(100%);  /* الصور تبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء الصور */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+  cursor: pointer;
+}
+
+/* إظهار الصور عند مرور الماوس على الحاوية */
+.img90.showb img {
+  transform: translateY(0);  /* إرجاع الصور إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصور */
+}
+
+/* تخصيص تأثير التمرير للصور المختلفة */
+.img90:hover img:nth-child(1) {
+  transform: translateY(-50px);  /* تأثير التمرير للصور الأولى */
+}
+
+.img90:hover img:nth-child(2) {
+  transform: translateY(50px);   /* تأثير التمرير للصور الثانية */
+}
+.img80 {
+  position: relative;
+  width: 300px;  /* يمكنك تغيير الحجم حسب الحاجة */
+  height: 500px; /* يمكنك تغيير الحجم حسب الحاجة */
+  top: 2300px;
+  left: 75%;
+}
+
+/* تأثير الصورة في .img80 */
+.img80 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translateY(100%);  /* الصورة تبدأ من أسفل الحاوية */
+  opacity: 0;  /* إخفاء الصورة */
+  transition: transform 0.5s ease, opacity 0.5s ease;  /* تأثير سلس */
+  cursor: pointer;
+}
+
+/* إظهار الصورة عند مرور الماوس على الحاوية */
+.img80.showm img {
+  transform: translateY(0);  /* إرجاع الصورة إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصورة */
+}
+.THE h1 {
+  position: relative;
+  color: #f0f0f0;
+  position: relative;
+  top: 2650px;
+  left: 55%;
+  font-weight: 100;
+  font-size: 28px;
+}
+.THE h2 {
+  position: relative;
+  color: #f0f0f0;
+  position: relative;
+  top: 2660px;
+  left: 55%;
+  font-weight: 100;
+  font-size: 50px;
+font-family: 'Times New Roman', Times, serif;
+}
+.THE p {
+  position: relative;
+  color: #f0f0f0;
+  position: relative;
+  top: 2800px;
+  left: 30%;
+
+
+}
+footer {
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+  position: relative;
+  top: 2700px;
+}
+
+.footer-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.footer-content h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #333;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.error-message {
+  color: #d9534f;
+  font-size: 14px;
+  height: 20px;
+}
+
+button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+/* أسلوب خاص للشاشات الكبيرة (أجهزة سطح المكتب) */
+@media screen and (min-width: 1024px) {
+  .Container {
+    height: 9000px; /* ارتفاع الصفحة لأجهزة سطح المكتب */
+  }
+
+  .Book-Now {
+    width: 14%;
+  }
+
+  .About-Us {
+    height: 9000px;
+  }
+
+  .MICHELIN h1 {
+    font-size: 150px;
+  }
+
+  .Our-Food h1 {
+    font-size: 150px;
+  }
+
+  .Experience h1 {
+    font-size: 140px;
+  }
+
+  .Our-Chef h1 {
+    font-size: 140px;
+  }
+}
+
+/* أسلوب خاص للأجهزة المتوسطة (الأجهزة اللوحية) */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .Container {
+    height: 6000px; /* تقليص الارتفاع */
+  }
+
+  .Book-Now {
+    width: 18%;
+  }
+
+  .MICHELIN h1,
+  .Our-Food h1,
+  .Experience h1,
+  .Our-Chef h1 {
+    font-size: 100px;
+  }
+
+  .About-Us p {
+    font-size: 18px;
+    width: 80%;
+    left: 10%;
+  }
+
+  .img44 {
+    width: 240px;
+    height: 250px;
+  }
+}
+
+/* أسلوب خاص للأجهزة الصغيرة (الهواتف) */
+@media screen and (max-width: 767px) {
+  .Container {
+    height: 8300px; /* تقليص الارتفاع بشكل أكبر */
+  }
+  .The-faces {
+    display: flex;
+    
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* لأجهزة اللمس */
+    
+  }
+  .The-faces img {
+    max-width: 100%;
+    height: auto;
+    flex-shrink: 0; /* يمنع الصور من الانكماش */
+    margin-right: 10px;
+    transition: transform 0.3s ease;
+}
+  
+
+  .Book-Now {
+    width: 50%;
+    padding: 10px;
+  }
+  .About h1 {
+    position: relative;
+    right: 30%;
+    font-size: 40px;
+    bottom: 30px;
+  }
+  .About-Us p {
+    position: relative;
+    top: -0px;
+    
+  }
+  .image-container3 img {
+  width: 80%;
+  height: 250px;
+
+  }
+  .image-container3 {
+      position: relative;
+  right: 70%;
+  }
+  
+/* تأثير عند المرور على الحاوية */
+.image-container3:hover .image-wrapper3:nth-child(1) {
+  transform: translateX(-150px) translateY(-50px);
+}
+
+.image-container3:hover .image-wrapper3:nth-child(2) {
+  transform: translateX(100px) translateY(-100px);
+}
+
+.image-container3:hover .image-wrapper3:nth-child(3) {
+  transform: translateX(0px) translateY(200px);
+}
+  .MICHELIN h1 {
+    position: relative;
+    right: 32%;
+    font-size: 40px;
+    bottom: 130px;
+  }
+  .Selected  {
+    width: 90%;
+  position: relative;
+    top: 70px;
+    left: 5%;
+  }
+  .img44 {
+    position: relative;
+    top: 50px;
+  
+  }
+  .img44 img {
+      width: 100%;
+      
+      
+  }
+  .img22  {
+    position: relative;
+  top: 400px;
+  }
+  .img22 img {
+  width: 70%;
+  height: 200px;
+  
+  }
+  
+/* إظهار الصور عند إضافة الفئة "show" */
+.img22.shows img {
+  transform: translateY(0);  /* إرجاع الصور إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصور */
+}
+
+/* تخصيص تأثير التمرير للصور المختلفة */
+.img22:hover img:nth-child(1) {
+  transform: translateX(50px) translateY(50px);  /* تأثير التمرير للصور الأولى */
+}
+
+.img22:hover img:nth-child(2) {
+  transform: translateX(-150px) translateY(-100px);  /* تأثير التمرير للصور الثانية */
+}
+
+.img22:hover img:nth-child(3) {
+  transform: translateX(150px) translateY(-200px); /* تأثير التمرير للصور الثالثة */
+}
+  .GaultMillau h1 {
+    font-size: 40px;
+  }
+  .have {
+    position: relative;
+    bottom: 550px;
+    width: 250%;
+    right: 20%;
+  }
+  .img11 img {
+    position: relative;
+    top: 100px;
+  }
+  .img50 img {
+    width: 50%;
+    height: 200px;
+  }
+  
+/* إظهار الصور عند مرور الماوس على الحاوية */
+.img50.showv img {
+  transform: translateY(0);  /* إرجاع الصور إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصور */
+}
+
+/* تخصيص تأثير التمرير للصور المختلفة */
+.img50:hover img:nth-child(1) {
+  transform: translateX(-220px) translateY(-200px); /* تأثير التمرير للصور الأولى */
+}
+
+.img50:hover img:nth-child(2) {
+  transform: translateX(50px) translateY(-150px);  /* تأثير التمرير للصور الثانية */
+}
+
+.img50:hover img:nth-child(3) {
+  transform: translateX(-100px) translateY(100px); /* تأثير التمرير للصور الثالثة */
+}
+  .Our-Food h1 {
+    font-size: 60px;
+    position: relative;
+    bottom: 10px;
+  }
+  .img13 {
+    position: relative;
+    bottom: 170px;
+  }
+  .Experience h1 {
+    font-size: 40px;
+    position: relative;
+    bottom: 10px;
+  }
+  .img60 {
+    position: relative;
+    
+  } 
+  .img60 img {
+    width: 90%;
+    height: 200px;
+    
+  }
+  /* إظهار الصور عند مرور الماوس على الحاوية */
+.img60.showy img {
+  transform: translateY(0);  /* إرجاع الصور إلى مكانها الطبيعي */
+  opacity: 1;  /* إظهار الصور */
+}
+
+/* تخصيص تأثير التمرير للصور المختلفة */
+.img60:hover img:nth-child(1) {
+  transform: translateX(-200px) translateY(-120px); /* تأثير التمرير للصور الأولى */
+}
+
+.img60:hover img:nth-child(2) {
+  transform: translateX(-20px) translateY(200px);  /* تأثير التمرير للصور الثانية */
+}
+
+.img60:hover img:nth-child(3) {
+  transform: translateX(100px) translateY(-100px);  /* تأثير التمرير للصور الثالثة */
+}
+
+  .About-Us p {
+    font-size: 16px;
+    width: 90%;
+    left: 5%;
+  }
+
+  .img44 {
+    width: 200px;
+    height: 200px;
+  }
+  .img90 img {
+    width: 50%;
+    height: 230px;
+    bottom: 300px;
+    position: relative;
+  }
+  .img80 img {
+    width: 55%;
+    height: 250px;
+    left: -15%;
+  }
+  .Our-Chef h1 {
+    position: relative;
+    top: 2200px;
+  
+  }
+  .Our-Chef h1  {
+    font-size: 70px;
+    
+  }
+  .THE h1 {
+    font-size: 20px;
+    position: relative;
+    top: 1850px;
+    left: 40%;
+  }
+  .THE h2 {
+    font-size: 40px;
+    position: relative;
+    top: 1870px;
+    left: 40%;
+  }
+  .THE p {
+    width: 60%;
+    position: relative;
+    top: 1970px;
+    left: 30%;
+  }
+  .Our-Chef h2 {
+  font-size:30px ;
+  position: relative;
+  top: 3220px;
+  left: 10%;
+  }
+  .Our-Chef h3 {
+  font-size:20px ;
+  position: relative;
+  top: 3150px;
+  left: 10%;
+  }
+  .Our-Chef p{
+  
+  position: relative;
+  top: 3380px;
+  left: 10%;
+  }
+  .footer {
+    position: relative;
+    bottom: 0;
+  }
+
+}
